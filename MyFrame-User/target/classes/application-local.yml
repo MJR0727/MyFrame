@@ -1,0 +1,69 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: qq85591662.
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.115.216.231/myframe?serverTimeZone=Asia/ShangHai&useUnicode=true&characterEncoding=UTF8&useSSL=false
+    druid:
+      min-idle: 20
+      max-active: 100
+      initial-size: 20
+      max-wait: 60000
+      #图形化界面配置 url-pattrn:路径
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: qq85591662.
+      #配置SQL过滤，打印在图形化界面 log-slow-sql:慢查询配置 slow-sql-millis:慢查询时间。
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
+        wall:
+          enabled: true
+
+  redis:
+    database: 0
+    host: 47.115.216.231
+    port: 6379
+    password: qq85591662.
+
+sql:
+  beauty:
+    show:
+      enabled: false
+
+logging:
+  config: classpath:log4j2-spring.xml
+
+log:
+  aspect:
+    enable: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleteFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+swagger:
+  base-package: com.MJR
+  title: MyFrame
+  contact-name: MJR
+  contact-url: 地址
+  email: 2224921390@qq.com
+  version: 1.0
+  description: 我的脚手架
+
+guava:
+  cache:
+    enable: true

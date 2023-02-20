@@ -7,28 +7,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MyFrame-common-tool" />
+        <module name="MyFrame-common-web" />
+        <module name="MyFrame-common-test" />
+        <module name="MyFrame-common-log" />
         <module name="MyFrame-common-redis" />
+        <module name="MyFrame-common-websocket" />
         <module name="MyFrame-common-mybatisplus" />
         <module name="MyFrame-common-swagger" />
-        <module name="MyFrame-common" />
+        <module name="MyFrame-common-starter" />
         <module name="MyFrame-User" />
-        <module name="MyFrame-common-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="MyFrame-mybatisplus" target="1.8" />
-      <module name="MyFrame-redis" target="8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="MyFrame" options="" />
-      <module name="MyFrame-User" options="-parameters" />
-      <module name="MyFrame-common" options="-parameters" />
-      <module name="MyFrame-common-swagger" options="" />
-      <module name="MyFrame-common-web" options="" />
-      <module name="MyFrame-mybatisplus" options="-parameters" />
-      <module name="MyFrame-redis" options="" />
+      <module name="MyFrame" options="-parameters" />
+      <module name="MyFrame-User" options="" />
+      <module name="MyFrame-common" options="" />
+      <module name="MyFrame-dependencies" options="" />
     </option>
   </component>
 </project>
