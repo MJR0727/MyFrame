@@ -23,7 +23,7 @@ import java.util.function.Function;
 @Slf4j
 public class GuavaCacheUtil<K,V> {
 
-    @Value("guava.cache.enable")
+    @Value("${guava.cache.enable}")
     private boolean guavaCacheEnable;
 
     private static Cache<String,String> localCache = CacheBuilder

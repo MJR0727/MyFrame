@@ -3,7 +3,7 @@ package com.MJR.user.controller;
 import com.MJR.web.domain.PageResponse;
 import com.MJR.web.domain.R;
 import com.MJR.user.entity.dto.SysUserDto;
-import com.MJR.user.entity.po.SysUserPo;
+import com.MJR.user.entity.po.UserPo;
 import com.MJR.user.entity.req.SysUserReq;
 import com.MJR.user.service.SysUserService;
 
@@ -33,7 +33,7 @@ public class SysUserController {
      * @return 查询结果
      */
     @GetMapping
-    public R<PageResponse<SysUserPo>> queryByPage(SysUserReq sysUserReq) {
+    public R<PageResponse<UserPo>> queryByPage(SysUserReq sysUserReq) {
         SysUserDto sysUserDto = new SysUserDto();
         BeanUtils.copyProperties(sysUserReq,sysUserDto);
         return R.ok(this.sysUserService.queryByPage(sysUserDto));
@@ -46,30 +46,30 @@ public class SysUserController {
      * @return 单条数据
      */
     @GetMapping("{id}")
-    public R<SysUserPo> queryById(@PathVariable("id") Long id) {
+    public R<UserPo> queryById(@PathVariable("id") Long id) {
         return R.ok(this.sysUserService.queryById(id));
     }
 
     /**
      * 新增数据
      *
-     * @param sysUserPo 实体
+     * @param userPo 实体
      * @return 新增结果
      */
     @PostMapping
-    public R<SysUserPo> add(SysUserPo sysUserPo) {
-        return R.ok(this.sysUserService.insert(sysUserPo));
+    public R<UserPo> add(UserPo userPo) {
+        return R.ok(this.sysUserService.insert(userPo));
     }
 
     /**
      * 编辑数据
      *
-     * @param sysUserPo 实体
+     * @param userPo 实体
      * @return 编辑结果
      */
     @PutMapping
-    public R<SysUserPo> edit(SysUserPo sysUserPo) {
-        return R.ok(this.sysUserService.update(sysUserPo));
+    public R<UserPo> edit(UserPo userPo) {
+        return R.ok(this.sysUserService.update(userPo));
     }
 
     /**

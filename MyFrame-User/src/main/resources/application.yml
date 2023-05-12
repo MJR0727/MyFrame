@@ -1,3 +1,10 @@
 spring:
   profiles:
     active: local
+  mvc:
+    static-path-pattern: /static/**
+#  过期时间（/秒）
+jwt:
+  token:
+    secret: helloMyFrameMJR010727
+    expiration: 600

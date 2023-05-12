@@ -7,15 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="MyFrame-common-log" />
+        <module name="MyFrame-common-redis" />
+        <module name="MyFrame-common-Resource-Server" />
+        <module name="MyFrame-common-Authrization" />
+        <module name="MyFrame-common-mybatisplus" />
+        <module name="MyFrame-common-security" />
+        <module name="MyFrame-common-starter" />
+        <module name="MyFrame-common-job" />
         <module name="MyFrame-common-tool" />
         <module name="MyFrame-common-web" />
         <module name="MyFrame-common-test" />
-        <module name="MyFrame-common-log" />
-        <module name="MyFrame-common-redis" />
         <module name="MyFrame-common-websocket" />
-        <module name="MyFrame-common-mybatisplus" />
         <module name="MyFrame-common-swagger" />
-        <module name="MyFrame-common-starter" />
         <module name="MyFrame-User" />
       </profile>
     </annotationProcessing>

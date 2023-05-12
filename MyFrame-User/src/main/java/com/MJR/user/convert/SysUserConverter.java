@@ -1,7 +1,7 @@
 package com.MJR.user.convert;
 
 import com.MJR.user.entity.dto.SysUserDto;
-import com.MJR.user.entity.po.SysUserPo;
+import com.MJR.user.entity.po.UserPo;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -16,5 +16,5 @@ public interface SysUserConverter {
 
     SysUserConverter INSTANCE = Mappers.getMapper(SysUserConverter.class);
 
-    SysUserPo convertDtoToSysUser(SysUserDto sysUserDto);
+    UserPo convertDtoToSysUser(SysUserDto sysUserDto);
 }

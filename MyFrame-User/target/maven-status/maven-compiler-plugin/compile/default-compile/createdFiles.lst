@@ -1,0 +1,10 @@
+com\MJR\user\convert\SysUserConverter.class
+com\MJR\user\entity\req\SysUserReq.class
+com\MJR\user\service\SysUserService.class
+com\MJR\user\UserApplication.class
+com\MJR\user\entity\dto\SysUserDto.class
+com\MJR\user\controller\SysUserController.class
+com\MJR\user\cache\SysUserCache.class
+com\MJR\user\service\impl\SysUserServiceImpl.class
+com\MJR\user\entity\po\SysUserPo.class
+com\MJR\user\convert\SysUserConverterImpl.class

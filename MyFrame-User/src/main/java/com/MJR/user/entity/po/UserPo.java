@@ -14,9 +14,9 @@ import java.io.Serializable;
  * @author makejava
  * @since 2023-01-03 17:42:35
  */
-@TableName("sys_user")
+@TableName("user")
 @Data
-public class SysUserPo extends BaseEntity implements Serializable {
+public class UserPo extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 131237757101470939L;
 
     @TableId(value = "id",type = IdType.AUTO)

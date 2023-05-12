@@ -22,6 +22,7 @@ public class RedissonConfig {
     @Bean
     public RedissonClient redissonClient() throws IOException {
         Config config = Config.fromYAML(new File("D:\\workplace\\IdeaProjects\\MyFrame\\MyFrame-User\\src\\main\\resources\\redisson-config.yaml"));
+        config.useSingleServer().setAddress("redis://47.115.216.231:6379").setDatabase(0);
         RedissonClient redissonClient = Redisson.create(config);
         return redissonClient;
     }

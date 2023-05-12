@@ -4,9 +4,11 @@ import com.MJR.redis.init.AbstractCache;
 import com.MJR.redis.util.RedissonUtil;
 import com.MJR.redis.util.SpringContextUtil;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
 import java.util.Map;
@@ -18,6 +20,7 @@ import java.util.Map;
  * @date 2023/2/4 11:55
  */
 @SpringBootTest
+//@RunWith(SpringRunner.class)
 public class testLock {
 
     @Autowired

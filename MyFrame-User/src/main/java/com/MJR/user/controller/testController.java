@@ -4,12 +4,10 @@ import com.MJR.redis.util.RedisShareLockUtil;
 import com.MJR.redis.util.RedisUtil;
 import com.MJR.redis.util.RedissonUtil;
 import com.MJR.tool.ExportWordUtil;
+import com.MJR.user.entity.po.UserPo;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 
@@ -75,5 +73,17 @@ public class testController {
         map.put("enthnicGroup","hanzu");
         map.put("phoneNumber","13729295281");
         ExportWordUtil.exprotWord(map,"导出文件","exprotWord.ftl");
+    }
+
+    @PostMapping("/testQuery")
+    public void testQuery(@RequestBody UserPo userPo) throws Exception {
+        //2022-12-18 21:49:00
+        System.out.println(userPo);
+    }
+
+    @GetMapping("/index")
+    @ResponseBody
+    public String index() {
+        return "xxl job executor running.";
     }
 }

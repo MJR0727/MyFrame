@@ -26,6 +26,10 @@
         <module>MyFrame-common-log</module>
         <module>MyFrame-common-tool</module>
         <module>MyFrame-common-websocket</module>
+        <module>MyFrame-common-job</module>
+        <module>MyFrame-common-Authrization</module>
+        <module>MyFrame-common-Resource-Server</module>
+        <module>MyFrame-common-security</module>
     </modules>
 
 

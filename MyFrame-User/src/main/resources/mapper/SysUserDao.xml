@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.MJR.user.dao.SysUserDao">
+
+    <!--TODO 统一化数据封装格式，完成返回-->
+<!--    private long userId;
+
+  private String userName;
+
+  private String password;
+
+  private String gender;
+
+  private String phoneNumber;
+
+  private String email;
+
+  private String avatar;
+
+  private String nickName;
+
+  private String state;
+
+  private String loginIp;
+
+  private Date loginDate;
+
+  /* 删除标记 0表正常 1表删除*/
+  private String deleteFlag;-->
+    <resultMap type="com.MJR.user.entity.po.SysUser" id="SysUserResult">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+        <result property="password" column="password"/>
+        <result property="gender" column="gender"/>
+        <result property="phoneNumber" column="phone_number"/>
+        <result property="email" column="email"/>
+        <result property="avatar" column="avatar"/>
+        <result property="nickName" column="nick_name"/>
+        <result property="state" column="state"/>
+        <result property="loginIp" column="login_ip"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="deleteFlag" column="delete_flag"/>
+<!--        <collection property="roles" javaType="java.util.List" resultMap="RolesResult"/>-->
+<!--        <collection property=""-->
+    </resultMap>
+
+    <sql id="selectUserVo">
+        select u.user_id,u.user_name,u.password,u.gender,u.phone_number,u.email,u.avatar,u.nick_name,u.state,u.login_ip,
+               u.create_by,u.create_time,u.update_by,u.update_by,u.update_time,u.delete_flag
+        from sys_user u
+--         left join sys_role r
+--         left join sys_user_role ur
+    </sql>
+
+<!--    权限集合-->
+<!--    <resultMap id="RolesResult" type="">-->
+<!--        -->
+<!--    </resultMap>-->
+
+    <select id="getUserByUsername" parameterType="string" resultMap="SysUserResult">
+        <include refid="selectUserVo"/>
+        where u.user_name = #{userName} and u.delete_flag = '0'
+    </select>
+</mapper>

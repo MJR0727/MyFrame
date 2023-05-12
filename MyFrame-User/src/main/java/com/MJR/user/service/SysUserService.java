@@ -1,8 +1,8 @@
 package com.MJR.user.service;
 
+import com.MJR.user.entity.po.UserPo;
 import com.MJR.web.domain.PageResponse;
 import com.MJR.user.entity.dto.SysUserDto;
-import com.MJR.user.entity.po.SysUserPo;
 
 /**
  * (SysUser)表服务接口
@@ -18,7 +18,7 @@ public interface SysUserService {
      * @param id 主键
      * @return 实例对象
      */
-    SysUserPo queryById(Long id);
+    UserPo queryById(Long id);
 
     /**
      * 分页查询
@@ -26,23 +26,23 @@ public interface SysUserService {
      * @param sysUserDto 分页参数对象
      * @return 查询结果
      */
-    PageResponse<SysUserPo> queryByPage(SysUserDto sysUserDto);
+    PageResponse<UserPo> queryByPage(SysUserDto sysUserDto);
 
     /**
      * 新增数据
      *
-     * @param sysUserPo 实例对象
+     * @param userPo 实例对象
      * @return 实例对象
      */
-    SysUserPo insert(SysUserPo sysUserPo);
+    UserPo insert(UserPo userPo);
 
     /**
      * 修改数据
      *
-     * @param sysUserPo 实例对象
+     * @param userPo 实例对象
      * @return 实例对象
      */
-    SysUserPo update(SysUserPo sysUserPo);
+    UserPo update(UserPo userPo);
 
     /**
      * 通过主键删除数据
